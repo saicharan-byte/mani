@@ -142,23 +142,26 @@
         }
 
 
-        /* ============================================
-                    GRID LAYOUT FOR QUESTIONS
-           ============================================ */
+       /* ============================================
+   DESKTOP (Default) → 3-column FORM layout
+============================================ */
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
-        /* DESKTOP: 3 columns */
-        form {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.question {
+    background: #fafafa;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
 
-        .btn {
-            grid-column: 1 / -1;
-        }
+
 /* ============================================
    TABLET (max-width: 900px)
-   
+   → Proper FORM layout (2 columns)
 ============================================ */
 @media (max-width: 900px) {
 
@@ -189,7 +192,8 @@
 
 /* ============================================
    MOBILE (max-width: 600px)
-   →
+   → Full mobile FORM layout (1 column)
+   → Looks like Google Form / Exam form
 ============================================ */
 @media (max-width: 600px) {
 
