@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz Application</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Online Quiz Application</h2>
+
+        <form>
+
+            <div class="question animate">
+                <p>1. HTML stands for?</p>
+                <label><input type="radio" name="q1"> Hyper Text Markup Language</label><br>
+                <label><input type="radio" name="q1"> Home Tool Markup Language</label><br>
+                <label><input type="radio" name="q1"> Hyperlinks and Text Mark Language</label><br>
+                <label><input type="radio" name="q1"> Hyper Text Main Language</label><br>
+            </div>
+
+            <div class="question animate">
+                <p>2. CSS is used for?</p>
+                <label><input type="radio" name="q2"> Structure</label><br>
+                <label><input type="radio" name="q2"> Styling</label><br>
+                <label><input type="radio" name="q2"> Programming</label><br>
+                <label><input type="radio" name="q2"> Database</label><br>
+            </div>
+
+            <div class="question animate">
+                <p>3. JS stands for?</p>
+                <label><input type="radio" name="q3"> Java Script</label><br>
+                <label><input type="radio" name="q3"> Joseph Script</label><br>
+                <label><input type="radio" name="q3"> Just Script</label><br>
+                <label><input type="radio" name="q3"> Java System</label><br>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+
+        </form>
+
+        <h2>Result Summary (Sample Table)</h2>
+        <table>
+            <tr>
+                <th>Total Questions</th>
+                <th>Correct</th>
+                <th>Wrong</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- css -->
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .question p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        /* BUTTON */
+        .btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* TABLE DESIGN */
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* -----------------------------
+           CSS ANIMATION FOR QUESTIONS
+        ------------------------------ */
+        .animate {
+            opacity: 0;
+            animation: fadeSlide 1s forwards;
+        }
+
+        .animate:nth-child(1) { animation-delay: 0.2s; }
+        .animate:nth-child(2) { animation-delay: 0.5s; }
+        .animate:nth-child(3) { animation-delay: 0.8s; }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        /* ============================================
+                    GRID LAYOUT FOR QUESTIONS
+           ============================================ */
+
+        /* DESKTOP: 3 columns */
+        form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .btn {
+            grid-column: 1 / -1;
+        }
+
+
+        /* ============================================
+                    TABLET VIEW (max-width: 900px)
+           ============================================ */
+        @media (max-width: 900px) {
+            form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .container {
+                width: 80%;
+            }
+
+            .btn {
+                grid-column: 1 / -1;
+            }
+        }
+
+
+        /* ============================================
+                    MOBILE VIEW (max-width: 600px)
+           ============================================ */
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .question {
+                padding: 12px;
+            }
+
+            .btn {
+                width: 100%;
+                grid-column: 1 / -1;
+            }
+        }
+
+    </style>
+
+</body>
+</html>
