@@ -156,63 +156,77 @@
         .btn {
             grid-column: 1 / -1;
         }
-
-
-       /* ============================================
-        TABLET VIEW (max-width: 900px)
-   ============================================ */
+/* ============================================
+   TABLET (max-width: 900px)
+   
+============================================ */
 @media (max-width: 900px) {
 
     form {
-        display: block;   /* LIST VIEW */
+        grid-template-columns: repeat(2, 1fr);  /* FORM-LIKE LAYOUT */
+        gap: 15px;
     }
 
     .question {
-        margin-bottom: 20px;
-        border-left: 5px solid #007bff;
-        padding: 18px;
-        background: #f0f7ff;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .container {
-        width: 85%;
+        width: 90%;
     }
 
     .btn {
+        grid-column: 1 / -1;
         width: 100%;
+        padding: 15px;
+        font-size: 18px;
     }
 }
 
 
 /* ============================================
-        MOBILE VIEW (max-width: 600px)
-   ============================================ */
+   MOBILE (max-width: 600px)
+   →
+============================================ */
 @media (max-width: 600px) {
 
     form {
-        display: block;   /* LIST VIEW for Mobile */
-    }
-
-    .question {
-        margin-bottom: 15px;
-        background: #eef6ff;
-        border-left: 6px solid #0056b3;
-        padding: 15px;
-    }
-
-    label {
-        font-size: 15px;
+        grid-template-columns: 1fr;   /* FULL FORM VIEW */
+        gap: 12px;
     }
 
     .container {
-        width: 95%;
-        padding: 12px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .question {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        width: 100%;
+    }
+
+    .question p {
+        font-size: 17px;
+    }
+
+    label {
+        display: block;
+        padding: 5px 0;
+        font-size: 15px;
     }
 
     .btn {
         width: 100%;
-        padding: 12px;
-        font-size: 18px;
+        padding: 14px;
+        font-size: 17px;
+        border-radius: 8px;
     }
 }
 
