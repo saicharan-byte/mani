@@ -190,49 +190,29 @@ form {
 }
 
 
-/* ============================================
-   MOBILE (max-width: 600px)
-   → Full mobile FORM layout (1 column)
-   → Looks like Google Form / Exam form
-============================================ */
 @media (max-width: 600px) {
-
-    form {
-        grid-template-columns: 1fr;   /* FULL FORM VIEW */
-        gap: 12px;
+    .container {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 15px;
     }
 
-    .container {
-        width: 100%;
-        padding: 10px;
-        border-radius: 0;
+    form {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
     }
 
     .question {
-        padding: 16px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-        width: 100%;
-    }
-
-    .question p {
-        font-size: 17px;
-    }
-
-    label {
-        display: block;
-        padding: 5px 0;
-        font-size: 15px;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 14px;
-        font-size: 17px;
-        border-radius: 8px;
+        width: 100% !important;
+        margin: 0;
+        padding: 18px;
     }
 }
+
+    
+
 
 
     </style>
